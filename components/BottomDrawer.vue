@@ -104,7 +104,7 @@ var isDrawerOpen = ref(false)
 
 useListen('onDrawerVisCh', (isVisible) => {
     isDrawerOpen.value = isVisible
-    console.log('onDrawerVisCh')
+    //console.log('onDrawerVisCh')
 })
 function onClose() {
     isDrawerOpen.value = false;
