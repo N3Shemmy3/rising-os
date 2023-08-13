@@ -5,8 +5,8 @@
     >
         <div
             v-if="isDrawerOpen"
-            id="overlay"
-            @click="onClose()"
+            ref="overlay"
+            @click="e => onClose(e)"
             class="
             outer
             fixed
@@ -21,7 +21,7 @@
                 id="menu"
                 class="
                 absolute bottom-0 left-0 right-0
-                z-50 mx-2 p-4 
+                z-50 mx-2 p-2
                 md:max-w-sm md:left-1
                 h-fit flex-grow
                 rounded-t-l bg-colorBackground
@@ -66,12 +66,12 @@
                         v-Ripple
                         v-for="n in socials"
                         class="
-                    h-10 w-10 
-                    cursor-pointer 
-                    rounded-full
-                    hover:bg-colorSurface
-                    transition-all
-                    duration-300                
+                            h-10 w-10 
+                            cursor-pointer 
+                            rounded-full
+                            hover:bg-colorSurface
+                            transition-all
+                            duration-300                
                     "
                     >
                         <img
@@ -81,7 +81,8 @@
                     </button>
 
                     <button
-                        @click="onClose()"
+                        ref="closeButton"
+                        @click="isDrawerOpen = false"
                         class="
                             h-14 w-14
                             rounded-full bg-colorAccent
@@ -101,16 +102,19 @@
 </template>
 <script setup lang="ts">
 var isDrawerOpen = ref(false)
+var overlay = ref()
 
 useListen('onDrawerVisCh', (isVisible) => {
     isDrawerOpen.value = isVisible
-    //console.log('onDrawerVisCh')
 })
-function onClose() {
+function onClose(e: MouseEvent) {
+    if (e.target !== overlay.value) return
     isDrawerOpen.value = false;
     useEvent('onDrawerVisCh', isDrawerOpen.value)
 }
+function doNothing() {
 
+}
 const navItems = ref([
     {
         "icon": "heroicons:home",
