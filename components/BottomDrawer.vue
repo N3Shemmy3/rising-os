@@ -100,17 +100,17 @@
     </Transition>
 </template>
 <script setup lang="ts">
-const props = defineProps(['state'])
-const emit = defineEmits(['onCloseButtonClicked'])
-var isDrawerOpen = ref(props.state)
-function onClose() {
-    isDrawerOpen = !isDrawerOpen
-    emit('onCloseButtonClicked')
+var isDrawerOpen = ref(false)
 
-}
-onUpdated(() => {
-    console.log(props.state)
+useListen('onDrawerVisCh', (isVisible) => {
+    isDrawerOpen.value = isVisible
+    console.log('onDrawerVisCh')
 })
+function onClose() {
+    isDrawerOpen.value = false;
+    useEvent('onDrawerVisCh', isDrawerOpen.value)
+}
+
 const navItems = ref([
     {
         "icon": "heroicons:home",

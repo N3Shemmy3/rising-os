@@ -3,7 +3,6 @@
 
 
 html,
-main,
 body {
 	@apply bg-colorBackground text-colorOnBackground;
 	margin: 0;

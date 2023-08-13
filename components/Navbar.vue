@@ -63,12 +63,10 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['onClickMenuIcon'])
 var scrollPosition = ref(0)
 
 function showDrawer() {
-	console.log("onClickMenuIcon")
-	emit('onClickMenuIcon')
+	useEvent('onDrawerVisCh', true)
 }
 onMounted(() => {
 	//	window.addEventListener('scroll', updateScroll);
