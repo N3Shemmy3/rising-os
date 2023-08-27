@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 
+useListen('event:mouseover', (isHovering: boolean) => console.log(isHovering))
 </script>
 <style scoped>
 .scale-bg:hover {

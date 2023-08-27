@@ -6,15 +6,20 @@
                     id="parent"
                     class="show-on-md w-fit flex-grow"
                 >
-
                     <div
-                        class="flex-1 flex w-fit"
-                        v-for="item in navItems"
+                        class="navItems"
+                        v-on:mouseover="onMouseOver(true)"
+                        v-on:mouseout="onMouseOver(false)"
                     >
-                        <NuxtLink
-                            class="majorMonoDisplay "
-                            :to="item.url"
-                        >{{ item.title }}</NuxtLink>
+                        <div
+                            class="flex-1 flex w-fit"
+                            v-for="item in navItems"
+                        >
+                            <NuxtLink
+                                class="majorMonoDisplay "
+                                :to="item.url"
+                            >{{ item.title }}</NuxtLink>
+                        </div>
                     </div>
 
                 </div>
@@ -87,6 +92,7 @@
 </template>
 
 <script setup lang="ts">
+
 const menuIcons = ref([
     {
         "icon": "/svg/forum.svg",
@@ -118,6 +124,9 @@ var navItems = ref([
         "url": "#",
     },
 ])
+function onMouseOver(isHovering: boolean) {
+    useEvent('event:mouseover', isHovering)
+}
 </script>
 
 <style scoped>
