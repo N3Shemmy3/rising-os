@@ -1,12 +1,10 @@
 <template>
-    <div class="pt-6 md:pt-12 space-y-6 w-full">
+    <div class="pt-6 w-full">
         <div class="flex">
             <div class="flex-col flex flex-grow space-y-4">
-                <div
-                    id="parent"
-                    class="show-on-md w-fit flex-grow"
-                >
+                <div class="show-on-md w-fit flex-grow">
                     <div
+                        id="parent"
                         class="navItems"
                         v-on:mouseover="onMouseOver(true)"
                         v-on:mouseout="onMouseOver(false)"

@@ -3,25 +3,39 @@
     <div class="
         w-full
         h-screen
-        select-none text-colorOnBackground
-        bg-[url('/png/bg.png')] bg-cover bg-fixed">
-
-      <div class="
+        select-none text-colorOnBackground">
+      <div
+        id="bg-imge "
+        class="z-[-1] h-full"
+      >
+        <img
+          src="/png/bg.png"
+          :class="{ scalebg: isHovering }"
+          class="fixed h-full w-screen object-cover transition-all duration-500"
+        />
+      </div>
+      <div
+        id="content"
+        class="z-[0] absolute w-full top-0 bottom-0"
+      >
+        <div class="
             mx-auto
             max-w-screen-2xl
             ">
-        <Navbar />
-        <BottomDrawer />
-      </div>
-      <div class="min-h-full p-4 sm:px-6 md:px-14 ">
-        <div
-          id="content"
-          class="select-none noSelect  flex flex-col "
-        >
-          <NuxtPage />
+          <Navbar />
+          <BottomDrawer />
         </div>
+        <div class="h-screen p-4 sm:px-6 md:px-14 ">
+          <div
+            id="content"
+            class="select-none noSelect  flex flex-col "
+          >
+            <NuxtPage />
+          </div>
 
+        </div>
       </div>
+
     </div>
   </ClientOnly>
 </template>
@@ -33,11 +47,7 @@ useListen('event:mouseover', (isHover: boolean) => isHovering.value = isHover)
 </script>
 <style scoped>
 .scalebg {
-  transform: scale(1.2);
-}
-
-.unscalebg {
-  transform: scale(0.0);
+  transform: scale(1.5);
 }
 </style>
 
