@@ -9,7 +9,7 @@
         class="z-[-1] h-full"
       >
         <img
-          src="/png/bg.png"
+          src="/svg/bg.svg"
           :class="{ scalebg: isHovering }"
           class="fixed h-full w-screen object-cover transition-all duration-500"
         />

@@ -6,12 +6,12 @@
                     <div
                         id="parent"
                         class="navItems"
-                        v-on:mouseover="onMouseOver(true)"
-                        v-on:mouseout="onMouseOver(false)"
                     >
                         <div
                             class="flex-1 flex w-fit"
                             v-for="item in navItems"
+                            v-on:mouseover="onMouseOver(true)"
+                            v-on:mouseout="onMouseOver(false)"
                         >
                             <NuxtLink
                                 class="majorMonoDisplay "
@@ -145,7 +145,7 @@ function onMouseOver(isHovering: boolean) {
 }
 
 #parent:hover>div {
-    opacity: 0.6;
+    opacity: 0.4;
     transition: ease-in-out;
     transition-duration: .2s;
 }
