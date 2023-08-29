@@ -14,7 +14,6 @@
           class="fixed h-full w-screen object-cover transition-all duration-700 opacity-40"
         />
       </div>
-      <div id="menu-background-pattern"></div>
       <div
         id="content"
         class="z-[0] absolute w-full top-0 bottom-0"
