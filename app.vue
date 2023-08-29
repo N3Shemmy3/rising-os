@@ -27,12 +27,17 @@
 </template>
 
 <script setup lang="ts">
+const isHovering = ref(false)
 
-useListen('event:mouseover', (isHovering: boolean) => console.log(isHovering))
+useListen('event:mouseover', (isHover: boolean) => isHovering.value = isHover)
 </script>
 <style scoped>
-.scale-bg:hover {
+.scalebg {
   transform: scale(1.2);
+}
+
+.unscalebg {
+  transform: scale(0.0);
 }
 </style>
 
