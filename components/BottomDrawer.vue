@@ -132,19 +132,19 @@ const navItems = ref([
 ])
 const socials = ref([
     {
-        "icon": "/svg/forum.svg",
+        "icon": "svg/forum.svg",
         "title": "Forum",
         "url": ""
     }, {
-        "icon": "/svg/github.svg",
+        "icon": "svg/github.svg",
         "title": "Github",
         "url": ""
     }, {
-        "icon": "/svg/channel.svg",
+        "icon": "svg/channel.svg",
         "title": "Channel",
         "url": ""
     }, {
-        "icon": "/svg/x.svg",
+        "icon": "svg/x.svg",
         "title": "X",
         "url": ""
     },
