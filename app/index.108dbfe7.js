@@ -1,0 +1,1 @@
+import{_ as t,c as s,o as c,a as e,d as o}from"./entry.7f5f6acb.js";const a={},n={class:"pt-14"},r=e("h6",null,[o("We are "),e("span",{class:"text-colorAccentLight"},"Rising OS")],-1),_=[r];function d(i,l){return c(),s("div",n,_)}const h=t(a,[["render",d]]);export{h as default};
