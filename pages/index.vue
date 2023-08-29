@@ -97,13 +97,13 @@ const menuIcons = ref([
         "icon": "svg/forum.svg",
         "url": ""
     }, {
-        "icon": "/svg/github.svg",
+        "icon": "svg/github.svg",
         "url": ""
     }, {
-        "icon": "/svg/channel.svg",
+        "icon": "svg/channel.svg",
         "url": ""
     }, {
-        "icon": "/svg/x.svg",
+        "icon": "svg/x.svg",
         "url": ""
     },
 ])
