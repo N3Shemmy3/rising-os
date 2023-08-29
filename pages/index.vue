@@ -5,6 +5,7 @@
                 <div class="show-on-md w-fit flex-grow">
                     <div
                         id="parent"
+                        ref="menu"
                         class="navItems"
                     >
                         <div

@@ -5,15 +5,16 @@
         h-screen
         select-none text-colorOnBackground">
       <div
-        id="bg-imge "
-        class="z-[-1] h-full"
+        id="bg-imge"
+        class="z-[-2] h-full"
       >
         <img
           src="/svg/bg.svg"
           :class="{ scalebg: isHovering }"
-          class="fixed h-full w-screen object-cover transition-all duration-500"
+          class="fixed h-full w-screen object-cover transition-all duration-700 opacity-40"
         />
       </div>
+      <div id="menu-background-pattern"></div>
       <div
         id="content"
         class="z-[0] absolute w-full top-0 bottom-0"
@@ -47,6 +48,7 @@ useListen('event:mouseover', (isHover: boolean) => isHovering.value = isHover)
 </script>
 <style scoped>
 .scalebg {
+  opacity: .95;
   transform: scale(1.5);
 }
 </style>
