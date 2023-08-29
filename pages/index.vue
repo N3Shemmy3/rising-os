@@ -94,7 +94,7 @@
 
 const menuIcons = ref([
     {
-        "icon": "/rising-os/svg/forum.svg",
+        "icon": "svg/forum.svg",
         "url": ""
     }, {
         "icon": "/svg/github.svg",
