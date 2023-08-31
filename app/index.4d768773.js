@@ -1,0 +1,1 @@
+import{_ as s,c as t,o as c,a as e,d as o}from"./entry.8139d935.js";const n={},a={class:"pt-14 h-20 w-20 bg-[url('/svg/noise.svg')] style"},r=e("h6",null,[o("We are "),e("span",{class:"text-colorAccent"},"Rising OS")],-1),_=[r];function d(i,l){return c(),t("div",a,_)}const h=s(n,[["render",d]]);export{h as default};
