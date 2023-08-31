@@ -78,7 +78,6 @@
                 <h6 class="text-3xl md:text-[45px]">We are <span class="text-colorAccent">rising OS</span> !</h6>
                 <h6 class="italic font-sans text-xl md:text-[25px]">The os you didnt know <br> you needed </h6>
 
-
                 <img
                     class="w-[25rem]"
                     src="/png/pixle5.png"
@@ -111,7 +110,7 @@ const menuIcons = ref([
 var navItems = ref([
     {
         "title": "home",
-        "url": "#",
+        "url": "home",
     }, {
         "title": "team",
         "url": "#",
